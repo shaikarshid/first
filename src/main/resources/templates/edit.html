@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <form th:action="@{/update/submit/{id}(id=${student.id})}" th:object="${student}" th:method="post">
+        <label>Name:</label>
+       
+        <input type="text" th:field="*{name}" name="name"  /><br/>
+    
+    
+        <label>Age:</label>
+      
+        <input type="text" th:field="*{age}" name="age" /><br/>
+    
+        <label>Address:</label>
+        
+        <input type="text" th:field="*{address}" name="address" /><br/>
+        
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
